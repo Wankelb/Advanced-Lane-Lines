@@ -1,16 +1,33 @@
-## Advanced Lane Finding
+## Udacity Self-Driving Car Engineer Nano Degree Project-2 (Advanced Lane Finding)
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+The goals / steps of this project are the following:
 
+1-Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
 
-In this project, your goal is to write a software pipeline to identify the lane boundaries in a video, but the main output or product we want you to create is a detailed writeup of the project.  Check out the [writeup template](https://github.com/udacity/CarND-Advanced-Lane-Lines/blob/master/writeup_template.md) for this project and use it as a starting point for creating your own writeup.  
+2-Apply a distortion correction to raw images.
 
-Creating a great writeup:
+3-Use color transforms, gradients, etc., to create a thresholded binary image.
+
+4-Apply a perspective transform to rectify binary image ("birds-eye view").
+
+5-Detect lane pixels and fit to find the lane boundary.
+
+6-Determine the curvature of the lane and vehicle position with respect to center.
+
+7-Warp the detected lane boundaries back onto the original image.
+
+8-Output visual display of the lane boundaries and numerical estimation of lane curvature and vehicle position.
+
+Camera Calibration 
 ---
-A great writeup should include the rubric points as well as your description of how you addressed each point.  You should include a detailed description of the code used in each step (with line-number references and code snippets where necessary), and links to other supporting documents or external references.  You should include images in your writeup to demonstrate how your code works with examples.  
+**1. Compute camera matrix and distortion coefficients.**
 
-All that said, please be concise!  We're not looking for you to write a book here, just a brief description of how you passed each rubric point, and references to the relevant code :). 
+Using ```cv2.findChessboardCorners```, the corners points are stored in an array imgpoints for each calibration image where the chessboard could be found. The object points will always be the same as the known coordinates of the chessboard with zero as 'z' coordinate because the chessboard is flat. The object points are stored in an array called ```objpoints.``` I then used the output objpoints and imgpoints to compute the camera calibration and distortion coefficients using the ```cv2.calibrateCamera``` function. 
 
-You're not required to use markdown for your writeup.  If you use another method please just submit a pdf of your writeup.
+The image below depicts the results of applying ```cv2.undistort```, using the calibration and distortion coefficients, to one of the chessboard images:
+
+ <img src="images/undist-and-warp.jpg" width="480" alt="Combined Image" />
+
 
 The Project
 ---
