@@ -1,6 +1,6 @@
 ## Udacity Self-Driving Car Engineer Nano Degree Project-2 (Advanced Lane Finding)
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
-<<<<<<< HEAD
+
 The goals / steps of this project are the following:
 
 1-Compute the camera calibration matrix and distortion coefficients given a set of chessboard images.
@@ -30,7 +30,7 @@ Using ```cv2.findChessboardCorners```, the corners points are stored in an array
 
 The image below depicts the results of applying ```cv2.undistort```, using the calibration and distortion coefficients, to one of the chessboard images:
 
- <img src="./images/undist-and-warp.jpg" width="480" alt="Combined Image" />
+ <img src="images/undist-and-warp.png" width="480" alt="Combined Image" />
 
 
 The Project
